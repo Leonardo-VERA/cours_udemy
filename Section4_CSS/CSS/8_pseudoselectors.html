@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS realtionshios</title>
+    <style>
+        section:first-child > h1{
+            color:violet;
+        }
+        section:nth-child(2) > h1{
+            color:pink;
+        }
+        article a {
+            color:green;
+        }
+        article p + a {
+            color: yellowgreen;
+        }
+        section:nth-child(2n+2) > h1{
+            color:blue;
+        }
+        article p+a:hover {
+            color: orange;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+<div class="main-content">
+    <section class="articles">
+        <h1>Latest posts</h1>
+
+        <article>
+            <h1>Todays's rants</h1>
+            <p>
+            LOrem ipsum dolor sit amet.ETC.LOrem ipsum dolor sit amet
+            ETC.LOrem ipsum dolor sit amet.
+            <a href="#">More</a>
+            </p>
+            <a href="#">More</a>
+        </article>
+
+        <article>
+            <h1>Todays's rants</h1>
+            <p>
+            LOrem ipsum dolor sit amet.ETC.LOrem ipsum dolor sit amet
+            ETC.LOrem ipsum dolor sit amet.
+            <a href="#">More</a>
+            </p>
+            <a href="#">More</a>
+        </article>
+    </section>
+
+    <section class="articles">
+        <h1>Latest posts</h1>
+
+        <article>
+            <h1>Todays's rants</h1>
+            <p>
+            LOrem ipsum dolor sit amet.ETC.LOrem ipsum dolor sit amet
+            ETC.LOrem ipsum dolor sit amet.
+            <a href="#">More</a>
+            </p>
+            <a href="#">More</a>
+        </article>
+
+    </section>
+
+    <aside>
+        <section class="glossary">
+            <h1>Todays's rants</h1>
+            <dl>
+                <dt>Term1</dt>
+                <dd>definition for term </dd>
+            </dl>
+        </section>
+    </aside>
+</div>
+
+<footer>
+    <h1>Latest child</h1>
+    <small>&copy 2026. All rightes reserverd</small>
+    <p>See our <a href="#">terms &amp; Conditions</a></p>
+</footer>
+
+
+</body>
+</html>

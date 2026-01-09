@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS Techniques Demonstration - PersTenas</title>
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="css_style/main.css">
+
+  <!-- Internal CSS - demonstrating internal styles -->
+  <style>
+    .internal-style-demo {
+      background-color: #e0e7ff;
+      border: 3px solid #6366f1;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+    }
+
+    .internal-style-demo h4 {
+      color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="main-logo" src="https://placehold.co/300x100/6366f1/white?text=PersTenas+Art" alt="PersTenas Art Gallery Logo">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="css_demo.html">CSS Demo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>CSS Techniques Demonstration</h1>
+    <p class="special-text">
+      Cette page démontre toutes les techniques CSS apprises dans le cours. Chaque section illustre
+      un concept différent avec des exemples concrets et visuels.
+    </p>
+  </section>
+
+  <!-- ===================================
+       1. INLINE, INTERNAL, EXTERNAL STYLES
+       =================================== -->
+  <section>
+    <h2>1. Inline, Internal et External Styles</h2>
+
+    <article class="card">
+      <h3>External Stylesheet (Fichier main.css)</h3>
+      <p>
+        Ce paragraphe utilise les styles du fichier externe <strong>css_style/main.css</strong>.
+        C'est la méthode recommandée pour organiser vos styles CSS.
+      </p>
+    </article>
+
+    <article class="internal-style-demo">
+      <h4>Internal Styles (Balise &lt;style&gt; dans le &lt;head&gt;)</h4>
+      <p>
+        Ce bloc utilise des styles internes définis dans la balise &lt;style&gt; en haut de cette page.
+        Utile pour des styles spécifiques à une seule page.
+      </p>
+    </article>
+
+    <article class="card">
+      <h4>Inline Styles (Attribut style)</h4>
+      <p style="color: #ec4899; font-weight: bold; background-color: #fce7f3; padding: 10px; border-radius: 5px;">
+        Ce paragraphe utilise un style inline directement dans l'attribut style de la balise.
+        À éviter en général, mais utile pour des modifications rapides ou dynamiques.
+      </p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       2. ID AND CLASS SELECTORS
+       =================================== -->
+  <section>
+    <h2>2. ID et Class Selectors</h2>
+
+    <article class="card">
+      <h3>Utilisation de Classes</h3>
+      <p class="highlight">Cette classe "highlight" ajoute un fond jaune et du padding.</p>
+      <p class="special-text">Cette classe "special-text" change la couleur et le font-weight.</p>
+      <div class="callout">
+        Cette classe "callout" crée une boîte de mise en évidence avec bordure gauche colorée.
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Utilisation d'ID</h3>
+      <p id="unique-paragraph">
+        Ce paragraphe a un ID "unique-paragraph" qui lui donne un style unique.
+        Les IDs doivent être uniques sur la page et ont une spécificité plus élevée que les classes.
+      </p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       3. ELEMENT SELECTORS
+       =================================== -->
+  <section>
+    <h2>3. Element Selectors</h2>
+
+    <article class="card">
+      <p>
+        Tous les paragraphes (&lt;p&gt;), titres (&lt;h1&gt;, &lt;h2&gt;, etc.), et liens (&lt;a&gt;)
+        de ce site utilisent des element selectors définis dans main.css. Ces sélecteurs appliquent
+        des styles à tous les éléments d'un type donné.
+      </p>
+      <a href="#">Exemple de lien stylé avec element selector</a>
+    </article>
+  </section>
+
+  <!-- ===================================
+       4. ATTRIBUTE SELECTORS
+       =================================== -->
+  <section>
+    <h2>4. Attribute Selectors</h2>
+
+    <article class="card">
+      <h3>Images avec attribut alt</h3>
+      <img src="https://placehold.co/400x200/6366f1/white?text=Attribute+Selector" alt="Image avec attribut alt" width="400">
+      <p>L'image ci-dessus utilise img[alt] pour avoir une bordure et des effets hover.</p>
+
+      <h3>Inputs avec types spécifiques</h3>
+      <label>Champ texte (input[type="text"]):</label>
+      <input type="text" placeholder="Tapez quelque chose..." required>
+
+      <label>Champ email (input[type="email"]):</label>
+      <input type="email" placeholder="votre@email.com" required>
+
+      <p><small>Note: Les champs required ont une bordure gauche rose grâce à input[required]</small></p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       5. RELATIONSHIP SELECTORS
+       =================================== -->
+  <section>
+    <h2>5. Relationship Selectors</h2>
+
+    <article class="card">
+      <h3>Descendant Selector (nav a)</h3>
+      <p>
+        Dans la navigation en haut, tous les liens à l'intérieur de &lt;nav&gt; sont stylés
+        avec le sélecteur "nav a" (descendant).
+      </p>
+
+      <h3>Child Selector (nav &gt; ul &gt; li)</h3>
+      <p>
+        Les éléments &lt;li&gt; qui sont des enfants directs de &lt;ul&gt; dans &lt;nav&gt;
+        utilisent "nav > ul > li" (child selector).
+      </p>
+
+      <h3>Adjacent Sibling Selector (h2 + p)</h3>
+      <p>Ce paragraphe vient juste après un h2, donc il a un style spécial (plus grand, italique).</p>
+
+      <h3>General Sibling Selector (h3 ~ p)</h3>
+      <p>Ce paragraphe est un sibling de h3 et a une marge gauche.</p>
+      <p>Celui-ci aussi est affecté par le general sibling selector.</p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       6. PSEUDO-CLASS SELECTORS
+       =================================== -->
+  <section>
+    <h2>6. Pseudo-Class Selectors</h2>
+
+    <article class="card">
+      <h3>:hover, :active, :visited</h3>
+      <p>
+        <a href="#">Survolez ce lien</a> pour voir l'effet :hover.
+        <a href="#visited">Cliquez ici</a> pour tester :visited et :active.
+      </p>
+
+      <h3>:first-child et :last-child</h3>
+      <ul>
+        <li>Premier élément (style spécial avec :first-child)</li>
+        <li>Élément du milieu</li>
+        <li>Dernier élément (style spécial avec :last-child)</li>
+      </ul>
+
+      <h3>:nth-child</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Colonne 1</th>
+            <th>Colonne 2</th>
+            <th>Colonne 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ligne impaire (fond gris)</td>
+            <td>Données</td>
+            <td>Valeurs</td>
+          </tr>
+          <tr>
+            <td>Ligne paire (fond blanc)</td>
+            <td>Données</td>
+            <td>Valeurs</td>
+          </tr>
+          <tr>
+            <td>Ligne impaire (fond gris)</td>
+            <td>Données</td>
+            <td>Valeurs</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>:focus (sur les inputs)</h3>
+      <input type="text" placeholder="Cliquez ici pour voir :focus">
+    </article>
+  </section>
+
+  <!-- ===================================
+       7. CSS BOX MODEL
+       =================================== -->
+  <section>
+    <h2>7. CSS Box Model</h2>
+
+    <article class="card">
+      <h3>Démonstration du Box Model</h3>
+      <p>Le box model est composé de: Content, Padding, Border, et Margin.</p>
+
+      <div class="box-model-demo">
+        <strong>Zone de contenu</strong><br>
+        Padding: 20px (espace intérieur)<br>
+        Border: 5px solid (bordure)<br>
+        Margin: 30px (espace extérieur)
+      </div>
+
+      <p>Inspectez cet élément dans les DevTools pour voir le box model complet!</p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       8. BORDERS, MARGINS, PADDING, CORNERS
+       =================================== -->
+  <section>
+    <h2>8. Borders, Margins, Padding et Corners</h2>
+
+    <article class="card">
+      <h3>Types de bordures</h3>
+
+      <div class="border-solid">
+        <strong>Border Solid:</strong> Bordure solide de 3px en bleu
+      </div>
+
+      <div class="border-dashed">
+        <strong>Border Dashed:</strong> Bordure en pointillés rose
+      </div>
+
+      <div class="border-dotted">
+        <strong>Border Dotted:</strong> Bordure en points orange
+      </div>
+
+      <h3>Border Radius (Coins arrondis)</h3>
+
+      <div style="display: inline-block; width: 150px; height: 100px; background-color: #6366f1; color: white; padding: 10px; margin: 10px;" class="rounded">
+        Rounded<br>(8px)
+      </div>
+
+      <div style="display: inline-block; width: 150px; height: 100px; background-color: #ec4899; color: white; padding: 10px; margin: 10px;" class="rounded-top">
+        Rounded Top<br>(15px haut)
+      </div>
+
+      <div style="display: inline-block; width: 100px; height: 100px; background-color: #f59e0b; color: white; padding: 30px; margin: 10px; text-align: center;" class="rounded-full">
+        Cercle<br>(50%)
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================================
+       9. TEXT AND FONT PROPERTIES
+       =================================== -->
+  <section>
+    <h2>9. Text et Font Properties</h2>
+
+    <article class="card">
+      <p class="text-uppercase">text-transform: uppercase - tout en majuscules</p>
+      <p class="text-lowercase">TEXT-TRANSFORM: LOWERCASE - TOUT EN MINUSCULES</p>
+      <p class="text-capitalize">text-transform: capitalize - première lettre en majuscule</p>
+
+      <p class="font-bold">Font-weight: bold - texte en gras</p>
+      <p class="font-italic">Font-style: italic - texte en italique</p>
+
+      <p class="letter-spacing-wide">Letter-spacing: 3px - espacement des lettres</p>
+      <p class="line-height-relaxed">Line-height: 2 - interligne double pour une meilleure lisibilité des textes longs.</p>
+
+      <p class="text-center">Text-align: center - texte centré</p>
+      <p class="text-right">Text-align: right - texte aligné à droite</p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       10. COLOR PROPERTIES
+       =================================== -->
+  <section>
+    <h2>10. Color Properties</h2>
+
+    <article class="card">
+      <h3>Dégradés de couleurs (Linear Gradients)</h3>
+
+      <div class="bg-gradient-purple" style="margin: 15px 0;">
+        <strong>Purple Gradient:</strong> Dégradé de violet vers mauve
+      </div>
+
+      <div class="bg-gradient-pink" style="margin: 15px 0;">
+        <strong>Pink Gradient:</strong> Dégradé de rose foncé vers rose clair
+      </div>
+
+      <div class="bg-gradient-blue" style="margin: 15px 0;">
+        <strong>Blue Gradient:</strong> Dégradé de bleu foncé vers bleu clair
+      </div>
+
+      <p>Ces dégradés utilisent linear-gradient() avec des angles (135deg).</p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       11. FLOATING ELEMENTS
+       =================================== -->
+  <section>
+    <h2>11. Floating Elements et Clearing</h2>
+
+    <article class="card clearfix">
+      <h3>Float Left</h3>
+      <img class="float-left" src="https://placehold.co/300x200/8b5cf6/white?text=Float+Left" alt="Image flottante à gauche" width="300">
+      <p>
+        Cette image flotte à gauche du texte. Le texte s'enroule naturellement autour de l'image
+        grâce à la propriété float: left. C'est très utile pour créer des layouts de magazine
+        ou des articles avec des images intégrées dans le texte.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      </p>
+      <div class="clear"></div>
+    </article>
+
+    <article class="card clearfix">
+      <h3>Float Right</h3>
+      <img class="float-right" src="https://placehold.co/300x200/ec4899/white?text=Float+Right" alt="Image flottante à droite" width="300">
+      <p>
+        Cette image flotte à droite du texte avec float: right. Le texte s'enroule maintenant
+        du côté gauche de l'image, créant un effet visuel différent tout en restant harmonieux.
+      </p>
+      <p>
+        La propriété clear est utilisée pour empêcher que les éléments suivants ne s'enroulent
+        autour des éléments flottants. Le clearfix est une technique pour contenir les floats.
+      </p>
+      <div class="clear"></div>
+    </article>
+  </section>
+
+  <!-- ===================================
+       12. SPECIFICITY RULE
+       =================================== -->
+  <section>
+    <h2>12. Specificity Rule (Règle de spécificité)</h2>
+
+    <article class="card">
+      <h3>Hiérarchie de spécificité</h3>
+
+      <p>Paragraphe normal (element selector - faible spécificité)</p>
+      <p class="special-text">Paragraphe avec classe (class selector - moyenne spécificité)</p>
+      <p id="unique-paragraph">Paragraphe avec ID (ID selector - haute spécificité)</p>
+      <p class="override-all">Paragraphe avec !important (priorité maximale - à éviter!)</p>
+
+      <div class="callout">
+        <strong>Ordre de spécificité (du plus faible au plus fort):</strong>
+        <ol>
+          <li>Element selectors (p, h1, div)</li>
+          <li>Class selectors (.class-name)</li>
+          <li>ID selectors (#id-name)</li>
+          <li>Inline styles (style="...")</li>
+          <li>!important (priorité absolue)</li>
+        </ol>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================================
+       13. INHERITANCE
+       =================================== -->
+  <section>
+    <h2>13. Inheritance (Héritage)</h2>
+
+    <article class="card">
+      <div class="parent-container">
+        <h3>Parent Container</h3>
+        <p class="child-element">
+          Ce texte hérite de la couleur, taille de police et font-family du parent.
+          Les propriétés typographiques sont généralement héritées automatiquement.
+        </p>
+        <p class="child-element">
+          Un autre enfant qui hérite également des styles du parent. Notez que les
+          propriétés de box model (margin, padding, border) ne sont PAS héritées.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================================
+       14. INLINE VS BLOCK ELEMENTS
+       =================================== -->
+  <section>
+    <h2>14. Inline vs Block vs Inline-Block Elements</h2>
+
+    <article class="card">
+      <h3>Display: inline</h3>
+      <p>
+        Les éléments inline
+        <span class="inline-element">ne cassent pas</span>
+        <span class="inline-element">le flux du texte</span>
+        et s'affichent sur la même ligne.
+      </p>
+
+      <h3>Display: block</h3>
+      <div class="block-element">Premier élément block - prend toute la largeur</div>
+      <div class="block-element">Deuxième élément block - commence une nouvelle ligne</div>
+
+      <h3>Display: inline-block</h3>
+      <p>
+        <span class="inline-block-element">Inline-block 1</span>
+        <span class="inline-block-element">Inline-block 2</span>
+        <span class="inline-block-element">Inline-block 3</span>
+      </p>
+      <p>Les éléments inline-block se comportent comme inline mais acceptent width/height.</p>
+    </article>
+  </section>
+
+  <!-- ===================================
+       15. BOX SHADOWS ET EFFETS
+       =================================== -->
+  <section>
+    <h2>15. Box Shadows et Effets Visuels</h2>
+
+    <article class="card">
+      <div class="shadow-small" style="padding: 20px; margin: 15px 0; background: white;">
+        <strong>Shadow Small:</strong> Ombre légère (0 2px 4px)
+      </div>
+
+      <div class="shadow-medium" style="padding: 20px; margin: 15px 0; background: white;">
+        <strong>Shadow Medium:</strong> Ombre moyenne (0 4px 8px)
+      </div>
+
+      <div class="shadow-large" style="padding: 20px; margin: 15px 0; background: white;">
+        <strong>Shadow Large:</strong> Ombre prononcée (0 8px 16px)
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================================
+       16. TRANSITIONS ET HOVER EFFECTS
+       =================================== -->
+  <section>
+    <h2>16. Transitions et Hover Effects</h2>
+
+    <article class="card">
+      <p>Survolez les éléments suivants pour voir les transitions CSS:</p>
+
+      <div class="card" style="display: inline-block; width: 200px; margin: 10px;">
+        Carte avec hover effect<br>
+        (translateY et box-shadow)
+      </div>
+
+      <img src="https://placehold.co/200x150/f59e0b/white?text=Hover+Me" alt="Image avec effet hover" width="200" style="margin: 10px;">
+
+      <p>
+        <a href="#">Lien avec transition</a> (couleur et border-bottom)
+      </p>
+
+      <button type="submit">Bouton avec effet hover</button>
+    </article>
+  </section>
+
+  <aside>
+    <h3>Toutes les techniques CSS</h3>
+    <p>Cette page démontre:</p>
+    <ul>
+      <li>Styles inline, internal et external</li>
+      <li>Sélecteurs: ID, Class, Element, Attribute</li>
+      <li>Sélecteurs de relation: descendant, child, sibling</li>
+      <li>Pseudo-classes: hover, active, visited, focus, nth-child</li>
+      <li>Box Model complet (content, padding, border, margin)</li>
+      <li>Propriétés de texte et police</li>
+      <li>Couleurs et dégradés</li>
+      <li>Floating et clearing</li>
+      <li>Spécificité et héritage</li>
+      <li>Display: inline, block, inline-block</li>
+      <li>Effets visuels: shadows, transitions</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 PersTenas Art Gallery. All rights reserved.</p>
+    <p>Page de démonstration CSS - Toutes les techniques du cours</p>
+  </footer>
+
+</body>
+</html>

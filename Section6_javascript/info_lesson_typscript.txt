@@ -1,0 +1,10 @@
+COURS typescript
+
+typeof age
+> 'number'
+
+##functions
+fucntion myFunction(){
+    statements ...
+    return...
+}

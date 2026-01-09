@@ -1,0 +1,36 @@
+.container {
+    border: 1px solid green;
+    padding: 10px;
+
+   /* overflow: hidden;*/
+}
+
+.box {
+    background: red ;
+    margin: 5px;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+}
+
+.float {
+    float: left; /*right, none*/
+
+}
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+
+}
+/*
+.clearing {
+    float: left;
+}
+
+h1 {
+    clear: both; right, left
+}
+*/

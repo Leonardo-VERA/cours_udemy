@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact Us - PersTenas Art Gallery</title>
+</head>
+<body>
+  <header>
+    <img src="https://placehold.co/300x100/6366f1/white?text=PersTenas+Art" alt="PersTenas Art Gallery Logo">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Get in Touch</h1>
+    <p>
+      Whether you're an artist seeking representation, a collector looking for that perfect piece,
+      or simply someone who loves art, we'd love to hear from you. Our team typically responds
+      within 24 hours during business days.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact Information</h2>
+
+    <article>
+      <h3>Gallery Location</h3>
+      <p>
+        <strong>PersTenas Art Gallery</strong><br>
+        247 Art District Boulevard<br>
+        Creative Quarter, CR 10245<br>
+      </p>
+      <img src="https://placehold.co/800x400/10b981/white?text=Gallery+Location+Map" alt="Gallery Location Map" width="800">
+    </article>
+
+    <article>
+      <h3>Opening Hours</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Hours</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Closed</td>
+            <td>Staff planning day</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>10:00 AM - 7:00 PM</td>
+            <td>Extended hours</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>10:00 AM - 7:00 PM</td>
+            <td>Extended hours</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>10:00 AM - 7:00 PM</td>
+            <td>Extended hours</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>10:00 AM - 7:00 PM</td>
+            <td>First Friday: Free admission</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>11:00 AM - 6:00 PM</td>
+            <td>Guided tours at 2:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>11:00 AM - 6:00 PM</td>
+            <td>Family programming available</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article>
+      <h3>Phone and Email</h3>
+      <dl>
+        <dt>General Inquiries</dt>
+        <dd>Phone: +1 (555) 123-4567</dd>
+        <dd>Email: info@perstenas-art.com</dd>
+
+        <dt>Sales and Acquisitions</dt>
+        <dd>Phone: +1 (555) 123-4568</dd>
+        <dd>Email: sales@perstenas-art.com</dd>
+
+        <dt>Artist Submissions</dt>
+        <dd>Email: artists@perstenas-art.com</dd>
+
+        <dt>Press and Media</dt>
+        <dd>Email: press@perstenas-art.com</dd>
+
+        <dt>Education Programs</dt>
+        <dd>Phone: +1 (555) 123-4569</dd>
+        <dd>Email: education@perstenas-art.com</dd>
+      </dl>
+    </article>
+  </section>
+
+  <section>
+    <h2>Send Us a Message</h2>
+
+    <form method="POST" action="https://httpbin.org/post">
+      <fieldset>
+        <legend>Your Information</legend>
+
+        <label>Full Name *</label><br>
+        <input type="text" name="fullname" placeholder="Enter your full name" required><br><br>
+
+        <label>Email Address *</label><br>
+        <input type="email" name="email" placeholder="your.email@example.com" required><br><br>
+
+        <label>Phone Number</label><br>
+        <input type="text" name="phone" placeholder="(555) 123-4567"><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Inquiry Type *</legend>
+
+        <input type="radio" id="general" name="inquiry_type" value="general" checked>
+        <label for="general">General Question</label><br>
+
+        <input type="radio" id="purchase" name="inquiry_type" value="purchase">
+        <label for="purchase">Artwork Purchase</label><br>
+
+        <input type="radio" id="artist" name="inquiry_type" value="artist">
+        <label for="artist">Artist Submission</label><br>
+
+        <input type="radio" id="visit" name="inquiry_type" value="visit">
+        <label for="visit">Private Viewing Request</label><br>
+
+        <input type="radio" id="education" name="inquiry_type" value="education">
+        <label for="education">Education Programs</label><br>
+
+        <input type="radio" id="corporate" name="inquiry_type" value="corporate">
+        <label for="corporate">Corporate Services</label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+
+        <select name="referral_source">
+          <option value="">Please select...</option>
+          <option value="search">Search Engine</option>
+          <option value="social">Social Media</option>
+          <option value="friend">Friend or Colleague</option>
+          <option value="event">Art Event or Fair</option>
+          <option value="press">Magazine or Newspaper</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Message *</legend>
+
+        <label>Subject</label><br>
+        <input type="text" name="subject" placeholder="Brief subject line"><br><br>
+
+        <label>Message</label><br>
+        <textarea name="message" cols="80" rows="10" placeholder="Please provide details about your inquiry. The more information you share, the better we can assist you." required></textarea><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>Preferred Contact Method</label><br>
+        <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+        <label for="contact_email">Email</label>
+
+        <input type="radio" id="contact_phone" name="contact_method" value="phone">
+        <label for="contact_phone">Phone</label><br><br>
+
+        <label>Best Time to Reach You</label><br>
+        <select name="best_time">
+          <option value="">Any time</option>
+          <option value="morning">Morning (9 AM - 12 PM)</option>
+          <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+          <option value="evening">Evening (5 PM - 7 PM)</option>
+        </select><br><br>
+      </fieldset>
+
+      <p>
+        <input type="submit" value="Send Message">
+      </p>
+
+      <p>
+        <small>* Required fields. By submitting this form, you agree to our privacy policy.
+        We will never share your information with third parties.</small>
+      </p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <article>
+      <h3>Do I need an appointment to visit?</h3>
+      <p>
+        No appointment is necessary during regular gallery hours. However, for private viewings,
+        group tours (10+ people), or consultations with our curators, please contact us in advance
+        to ensure availability.
+      </p>
+    </article>
+
+    <article>
+      <h3>Is there an admission fee?</h3>
+      <p>
+        General admission is $12 for adults, $8 for students and seniors, and free for children
+        under 12. Every first Friday of the month features free admission for all visitors. Members
+        enjoy complimentary admission year-round.
+      </p>
+    </article>
+
+    <article>
+      <h3>Can I take photographs in the gallery?</h3>
+      <p>
+        Personal photography without flash is welcome in most exhibition spaces. Some special
+        exhibitions may have restrictions, which will be clearly marked. Commercial photography
+        and video recording require advance permission.
+      </p>
+    </article>
+
+    <article>
+      <h3>How do I submit my artwork for consideration?</h3>
+      <p>
+        We review artist submissions quarterly. Please email artists@perstenas-art.com with your
+        artist statement, CV, and 10-15 high-quality images of recent work. Include dimensions,
+        materials, and year created for each piece. Due to the volume of submissions, we can only
+        respond to artists we wish to schedule for a studio visit.
+      </p>
+    </article>
+
+    <article>
+      <h3>Do you offer art appraisal services?</h3>
+      <p>
+        We can provide informal opinions on artwork value, but for insurance or estate purposes,
+        we recommend certified independent appraisers. We're happy to provide referrals to qualified
+        professionals in your area.
+      </p>
+    </article>
+
+    <article>
+      <h3>Can I rent the gallery space for events?</h3>
+      <p>
+        Yes, our gallery spaces are available for private events, corporate functions, and special
+        occasions. Rental includes access to our catering-approved kitchen, AV equipment, and
+        flexible floor plans. Contact us for availability and pricing.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Directions and Parking</h2>
+
+    <article>
+      <h3>Public Transportation</h3>
+      <ul>
+        <li><strong>Metro:</strong> Blue Line to Art District station, 5-minute walk</li>
+        <li><strong>Bus:</strong> Routes 24, 35, and 67 stop directly in front of the gallery</li>
+        <li><strong>Bike:</strong> Bike racks available at the entrance</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Parking Options</h3>
+      <ul>
+        <li><strong>Street Parking:</strong> Metered parking available on Art District Boulevard and surrounding streets</li>
+        <li><strong>Creative Quarter Garage:</strong> 2 blocks away at 300 Gallery Avenue, $8 flat rate on evenings and weekends</li>
+        <li><strong>Museum District Lot:</strong> 3 blocks away at 150 Culture Street, $5 with gallery validation</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Accessibility</h3>
+      <p>
+        PersTenas Art Gallery is fully accessible. We offer wheelchair access via our main entrance,
+        accessible restrooms, and elevators to all floors. Assistive listening devices and large-print
+        exhibition guides are available at the front desk. Service animals are welcome. Please contact
+        us in advance if you have specific accessibility needs so we can ensure the best possible
+        experience.
+      </p>
+    </article>
+  </section>
+
+  <aside>
+    <h3>Join Our Community</h3>
+    <p>
+      Stay connected with PersTenas Art Gallery for exclusive previews, event invitations, and
+      art world insights.
+    </p>
+    <ul>
+      <li>Newsletter: Sign up at info@perstenas-art.com</li>
+      <li>Social Media: @PersTenasArt on all platforms</li>
+      <li>Membership Program: Benefits starting at $75/year</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 PersTenas Art Gallery. All rights reserved.</p>
+    <p>We respect your privacy and never share your contact information.</p>
+  </footer>
+
+</body>
+</html>

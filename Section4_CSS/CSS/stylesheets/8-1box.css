@@ -1,0 +1,20 @@
+div {
+    padding: 10px;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+
+    /*
+    static
+    relative
+    absolute
+    fixed
+    */
+    position: absolute;
+
+    /*top, left, right, bottom;*/
+    /*left: 20px;*/
+    top: 0px;
+
+
+}

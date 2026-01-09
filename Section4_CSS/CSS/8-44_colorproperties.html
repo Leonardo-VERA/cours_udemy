@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>important rule</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+
+    <style>
+        body{
+/*
+font-family
+specifies the font name; can be a comma separated list of names;
+possible values:
+single font name
+multiple font names separated by comma, from the most to the least specific
+*/
+           /* font-family: Georgia, Arial, sans-serif;*/
+           font-family: Georgia, 'Times New Roman', Times, serif;
+
+           line-height: 1.2;
+           letter-spacing: normal; /*normal*/
+           text-align: left; /*left, justified*/
+/*
+font-size
+specify the size of a font.
+values:
+inherit
+xx-small
+x-small
+small
+large
+x-large
+xx-large
+smaller
+larger
+[length]
+[percentage]
+*/
+           font-size: 16px; /*1em = 16px*/
+                
+        }
+        h1 {
+            font-size: 3em; /*1em = 16px*/
+
+        }
+        h2 {
+            font-size: 2em;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+/*
+font-weight:
+inherit
+normal
+bold
+lighter
+100 - 400 = normal
+500 - 700 = bold
+800 - 900 = extra bold (not supported from all browsers)
+*/
+            font-weight: bold; /* 500*/
+            line-height: 1.5;
+            letter-spacing: 10px;
+            color: rgb(0, 255, 34) /*#RRGGBB, rgba(), hsl()*/
+            
+
+
+        }
+        em {
+            font-style: italic;
+        }
+        p {
+            text-indent: 3em;
+            text-transform: uppercase; /*lowercase*/
+            background-image: url(http://placehold.co/60x20);
+            background-repeat: repeat-x; /*no-repeat*/
+            background-position: center;
+            background: transparent url(https://i.etsystatic.com/49747871/r/il/4d8df3/5756679543/il_570xN.5756679543_7gfr.jpg);
+        }
+        strong{
+            text-decoration: overline; /*line-through*/
+        }
+        p span {
+            background-color: #9387bd;
+
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <br>
+    <h1>
+        Main title
+    </h1>
+    <br>
+    <p>
+        <span>Une class CSS </span> sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        <strong>only p here example</strong>
+    </p>
+    <br>
+    <br>
+    <h2>
+        Main secondarie title
+    </h2>
+    <br>
+    <p>
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        Une class CSS sert juste d’étiquette. Elle n’a d’effet que si une règle CSS correspondante existe, par exemple
+        <em>only p here example</em>
+    </p>
+</body>
+</html>
