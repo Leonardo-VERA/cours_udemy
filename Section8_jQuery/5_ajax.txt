@@ -1,0 +1,18 @@
+AJAX signifie Asynchronous JavaScript and XML. Il s’agit d’une technique 
+qui permet à JavaScript de communiquer avec un serveur sans recharger la page. 
+Le navigateur peut envoyer une requête (par exemple avec GET) et recevoir des données 
+en arrière-plan pendant que l’utilisateur continue à interagir avec l’interface. 
+Même si le nom contient XML, le format le plus utilisé aujourd’hui est JSON.
+
+À l’origine, AJAX repose sur l’objet XMLHttpRequest, qui permet d’ouvrir une requête, 
+de l’envoyer au serveur et de suivre son état (readyState, status). Le fonctionnement 
+est asynchrone : le script n’est pas bloqué pendant l’attente de la réponse. 
+Ce mécanisme est à la base de nombreuses fonctionnalités comme le chargement 
+dynamique de contenu, l’autocomplétion ou les interfaces interactives.
+
+jQuery simplifie l’utilisation d’AJAX en fournissant des méthodes comme $.ajax(), 
+$.get() et $.post(). Ces méthodes masquent la complexité technique de XMLHttpRequest 
+et permettent de se concentrer sur les données échangées et leur traitement. 
+Même si des solutions plus modernes existent aujourd’hui (fetch, frameworks), 
+comprendre AJAX avec jQuery reste essentiel pour saisir le fonctionnement des APIs
+ et des échanges client-serveur, notamment en data et en SEO.

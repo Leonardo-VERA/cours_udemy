@@ -1,0 +1,20 @@
+En 2016, les navigateurs (notamment Chrome) ont renforcé leurs règles 
+de sécurité : certaines fonctionnalités JavaScript comme AJAX ne fonctionnent
+ pas correctement lorsqu’on ouvre un fichier HTML directement depuis 
+ le disque (file://). Pour éviter ces blocages (liés à la politique de sécurité 
+ et au same-origin policy), il fallait servir la page via un serveur HTTP local,
+  même très simple. C’est pour cela que le cours montre l’utilisation de localhost:8000
+   avec un petit serveur Python (python -m SimpleHTTPServer à l’époque).
+
+Le principe est simple : le navigateur fait une requête GET /index.html vers 
+un serveur (même local), exactement comme en production. Cela permet à AJAX, aux
+ requêtes HTTP et aux échanges avec des APIs de fonctionner normalement. Le serveur 
+ Python ne fait rien de complexe : il se contente d’exposer les fichiers du dossier
+  via HTTP, mais cela suffit pour respecter les règles de sécurité du navigateur.
+
+Aujourd’hui, le concept est le même, mais les outils ont évolué. On utilise plutôt 
+python -m http.server (Python 3), ou des solutions plus pratiques comme Live Server 
+(VS Code), Vite, Parcel ou npm serve. Ces outils lancent automatiquement un serveur 
+local, rechargent la page à chaque modification et facilitent le développement front-end.
+ En résumé : oui, c’est exactement le même principe que Live Server, mais avec des outils 
+ modernes, plus simples et plus rapides à utiliser.

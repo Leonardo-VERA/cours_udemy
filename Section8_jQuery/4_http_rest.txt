@@ -1,0 +1,18 @@
+HTTP method
+
+GET: "to request a specific resoruce from the server .GET only retrieves data"
+    'Can I have the list of all posts in our forum?' ONLY look!
+
+POST: to request that server creates a new piece of data in its system with the information provided
+    'Please, add this new post to the forum' Utilise when there was no data existant.
+
+PUT: to request an update to an existing information stored in the server
+    'Update this post with this new content' Update existant info
+
+DELETE to requrest the removal of an information
+    'REmove the post with id=xyz from our system'
+
+C'est quoi rest?
+- REST est une architecture qui organise les API autour des ressources, 
+en utilisant des URL et des méthodes HTTP standard pour créer, lire, 
+modifier et supprimer des données de manière simple, évolutive et sans état.
